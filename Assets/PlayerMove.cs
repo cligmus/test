@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
         float VInpt = Input.GetAxisRaw("Vertical");
         scoreval.text = score.ToString();
         healthval.text = Health.ToString();
-        Vector3 direction = new Vector3(HInpt, 0f, VInpt).normalized;
+        Vector3 direction = new Vector3(-HInpt, 0f, -VInpt).normalized;
         transform.Translate(direction * mvspd * Time.deltaTime, Space.World);
     }
 }
